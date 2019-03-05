@@ -4,7 +4,9 @@ layout: default
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](javascript).
+[Link to another page](another-page).
+
+[xxx](javascript).
 
 There should be whitespace between paragraphs.
 
