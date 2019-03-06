@@ -1,6 +1,7 @@
 ---
 title:  "Welcome to Jekyll!"
-categories: jekyll update
+categories: "jekyll update"
+tags: "hello, world"
 ---
 
 ### hello world
