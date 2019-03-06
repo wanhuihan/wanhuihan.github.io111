@@ -1,0 +1,27 @@
+{
+  "name": "wanhuihan.github.io",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/pages-themes/tactile.svg?branch=master)](https://travis-ci.org/pages-themes/tactile) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-tactile.svg)](https://badge.fury.io/rb/jekyll-theme-tactile)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wanhuihan/wanhuihan.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wanhuihan/wanhuihan.github.io/issues"
+  },
+  "homepage": "https://github.com/wanhuihan/wanhuihan.github.io#readme",
+  "dependencies": {
+    "gem": "^2.4.3",
+    "jekyll": "^3.0.0-beta1"
+  }
+}
