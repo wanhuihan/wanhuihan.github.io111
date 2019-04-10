@@ -17,15 +17,18 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>es6-1 | Hexo</title>
-  <meta property="og:type" content="article">
-<meta property="og:title" content="es6-1">
+  <title>es6 第一节 let, const | Hexo</title>
+  <meta name="description" content="所有es6的代码都需要通过babel插件进行转义成es5的代码，因为es5的代码兼容性比较好。 在es5中作用域(scoping)分为 全局作用域和局部作用域, window下都为全局作用域，通过函数function 来区分局部作用域。1234567var a = 123; // 全局作用域console.log(a);function b () &amp;#123;    var a = 456; //">
+<meta property="og:type" content="article">
+<meta property="og:title" content="es6 第一节 let, const">
 <meta property="og:url" content="http://yoursite.com/2019/04/10/es6-1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="所有es6的代码都需要通过babel插件进行转义成es5的代码，因为es5的代码兼容性比较好。 在es5中作用域(scoping)分为 全局作用域和局部作用域, window下都为全局作用域，通过函数function 来区分局部作用域。1234567var a = 123; // 全局作用域console.log(a);function b () &amp;#123;    var a = 456; //">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-10T01:37:35.261Z">
+<meta property="og:updated_time" content="2019-04-10T07:57:39.192Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="es6-1">
+<meta name="twitter:title" content="es6 第一节 let, const">
+<meta name="twitter:description" content="所有es6的代码都需要通过babel插件进行转义成es5的代码，因为es5的代码兼容性比较好。 在es5中作用域(scoping)分为 全局作用域和局部作用域, window下都为全局作用域，通过函数function 来区分局部作用域。1234567var a = 123; // 全局作用域console.log(a);function b () &amp;#123;    var a = 456; //">
   <!-- Canonical links -->
   <link rel="canonical" href="http://yoursite.com/2019/04/10/es6-1/index.html">
   
@@ -204,7 +207,7 @@
                 <a class="category-link" href="/categories/ecmascript-6/">ecmascript-6</a>
               </p>
               <p class="item-title">
-                <a href="/2019/04/10/es6-1/" class="title">es6-1</a>
+                <a href="/2019/04/10/es6-1/" class="title">es6 第一节 let, const</a>
               </p>
               <p class="item-date">
                 <time datetime="2019-04-10T01:37:20.000Z" itemprop="datePublished">2019-04-10</time>
@@ -332,7 +335,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      es6-1
+      es6 第一节 let, const
     </h1>
   
 
@@ -360,7 +363,31 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        
+        <p>所有es6的代码都需要通过babel插件进行转义成es5的代码，因为es5的代码兼容性比较好。</p>
+<p>在es5中作用域(scoping)分为 全局作用域和局部作用域, window下都为全局作用域，通过函数function 来区分局部作用域。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>; <span class="comment">// 全局作用域</span></span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">456</span>; <span class="comment">// 局部作用域</span></span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">b()</span><br></pre></td></tr></table></figure></p>
+<p>在es6中作用域分为块级作用域，一个 {} 为一个块，主要目的是为了防止污染到全局变量， 在块级作用域中，let, const 都生效<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">123</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(a) <span class="comment">// 123</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// a会抛出一个错误</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="什么是let"><a href="#什么是let" class="headerlink" title="什么是let?"></a>什么是let?</h4><p>let 在块级作用域中定义变量的关键字，类似于es5中的 var</p>
+<ul>
+<li>不能重复定义变量名</li>
+<li>可以修改值</li>
+</ul>
+<h4 id="什么是const"><a href="#什么是const" class="headerlink" title="什么是const?"></a>什么是const?</h4><p>const 定义常量的关键字，不会变化</p>
+<ul>
+<li>不能被修改</li>
+<li>不能被重复定义</li>
+<li><p>通过const 定义object的话可以被修改, 如果 obj引用被修改就会报错</p>
+<ul>
+<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj = &#123;&#125;;</span><br><span class="line">obj.a = <span class="number">123</span>;</span><br><span class="line"><span class="comment">// 以上代码可以正常运行，因为obj引用没有被修改</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>定义常量必须赋值</p>
+</li>
+<li>通常常量都用大写表示</li>
+<li>在作用域中中生效</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="number">3.1415926</span>;</span><br><span class="line"><span class="built_in">console</span>.log(PI); <span class="comment">// 3.1415926</span></span><br><span class="line"><span class="comment">// 以下代码都会报错</span></span><br><span class="line"><span class="keyword">const</span> PI = <span class="number">123</span>; <span class="comment">// 不要重复定义</span></span><br><span class="line">PI = <span class="number">456</span>;   <span class="comment">// 不能重新赋值</span></span><br><span class="line"><span class="keyword">const</span> Name; <span class="comment">// 定义常量必须赋值</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     <div class="article-footer">
@@ -369,7 +396,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="http://yoursite.com/2019/04/10/es6-1/" title="es6-1" target="_blank" rel="external">http://yoursite.com/2019/04/10/es6-1/</a>
+      <a href="http://yoursite.com/2019/04/10/es6-1/" title="es6 第一节 let, const" target="_blank" rel="external">http://yoursite.com/2019/04/10/es6-1/</a>
     </li>
     
     <li class="post-copyright-license">
